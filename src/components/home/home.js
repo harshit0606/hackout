@@ -1,15 +1,16 @@
-import React from 'react'
-import "./home.css"
+import React from "react";
+import "./home.css";
 import { BiSearch } from "react-icons/bi";
 import { AiOutlineHome } from "react-icons/ai";
-import { Outlet } from 'react-router-dom';
-import {RiMoneyDollarCircleLine} from "react-icons/ri"
-import {IoPersonOutline} from "react-icons/io5";
+import { Outlet } from "react-router-dom";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import { IoPersonOutline } from "react-icons/io5";
 import Logo from "../../assets/logo 2.png";
 import "bootstrap/dist/css/bootstrap.min.css";
-import {Link,useLocation} from "react-router-dom"
+import { Link, useLocation } from "react-router-dom";
+import { ConnectButton } from "web3uikit";
+
 function home() {
-   
   return (
     <div>
       <div className="header_main">
@@ -29,7 +30,7 @@ function home() {
           </div>
         </div>
         <div className="header_right">
-          <button>Connect Wallet</button>
+          <ConnectButton moralisAuth={false} />
         </div>
       </div>
       <div className="home2">
@@ -59,4 +60,4 @@ function home() {
   );
 }
 
-export default home
+export default home;
